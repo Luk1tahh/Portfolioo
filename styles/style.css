@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+/* SCROLL */ 
+::-webkit-scrollbar{
+    width: 15px;
+    }
+    /* COLOR DEL SCROLL */
+    ::-webkit-scrollbar-track{
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 50px;
+    }
+    /* FONDO DEL SCROLL */
+    ::-webkit-scrollbar-thumb{
+        background-color: #bb1133;
+    }
+body{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+/* LINEA */
+hr{
+    border: none;
+    border-top: 15px solid #bb1133;
+    color: #bb1133;
+
+}
+/* ENCABEZADO */
+.header{    
+    background: black;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 80px 12%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+    .logo{
+        color: white;
+        transition: 0.3s ease;
+
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .logo:hover{
+        color: #bb1133;
+        text-shadow: 0 0 25px #bb1133,
+                    0 0 50px #bb1133;
+        transform: scale(1.3);
+        cursor: context-menu;
+    }
+    span{
+        color: #bb1133;
+    }
+    /* NOC COMO LLAMARTE */
+    .navbar > a{
+        font-size: 20px;
+        color: white;
+        border-bottom: 3px solid transparent;
+        transition: 0.3s ease;
+
+        margin: 0 20px;
+        font-weight: 500;
+    }
+    .navbar > a:hover,
+    .navbar > a:active{
+        color: #bb1133;
+        border-bottom: 3px solid #bb1133;
+    }
+    /* CONTACTO */   
+    .contact{
+        background-color: white;
+        color: black;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        transition: 0.3s ease;
+        padding: 10px 28px;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    .contact:hover{
+        background-color: #bb1133;
+        box-shadow: 0 0 25px #bb1133;
+        color: white;
+    }
+
+/* MENU DESPLEGABLE
+.menu-hor{
+    background: black;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 14%;
+}
+.menu-hor li a{
+    color: white;
+    display: block;
+    padding: 5px;
+}
+.menu-hor > li:hover{
+    background: #bb1133;
+}
+.menu-ver{
+        background: rgb(0, 0, 0, 0.8);
+        width: 200px;
+        position: absolute;
+        display: none;
+        
+}
+.menu-hor li:hover .menu-ver{
+    display: block;
+}
+.menu-ver li:hover{
+    background: #bb1133;
+}
+.menu-ver li a{
+    display: block;
+    padding: 15px 15px 15px 20px;
+} */
+
+/* CUERPO */
+.home{
+    background: rgb(241, 241, 241);
+
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 8em;
+    padding: 200px 15% 0;
+}
+    .home-content{
+        max-width: 800px;
+    }
+    .home-content h3{
+        font-size: 42px;
+    }
+    .home-content h1{
+        font-size: 62px;
+        line-height: 1.2;
+    }
+    .home-content p{
+        font-size: 20px;
+        font-weight: 500;
+        margin: 25px 0 30px;
+        letter-spacing: 2px;
+    }
+
+/* LENGUAJES */
+.leng{
+    background: rgba(68, 64, 64, 0.1);
+
+    width: 100%;
+    min-height: 75vh;
+}
+    .leng > h1 {
+        color: white;
+        font-size: 60px;
+
+        padding: 80px 0px 50px 80px; /* top right bottom left */
+    }
+    .leng-text{
+        color: white;
+
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+        padding: 0px 0px 0px 80px;    
+    }
+    .lenguajes div{
+        display: flex; 
+        gap: 40px; 
+        align-items: center;
+        padding: 50px 150px;
+    }
+    .lenguajes p i{
+        color: white;
+        border: 4px solid #bb1133;
+        border-radius: 30%;
+        box-shadow: inset 0 0 10px #bb1133, 
+                    0 0 10px #bb1133;
+        transition: 0.3s ease;
+
+                    
+        font-size: 15vh;
+    }
+    .lenguajes p i:hover{
+        transform: scale(1.2);
+    }
+/* PIE DE PAGINA */
+.footer{
+    background-color: black;
+
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+}
+    .footer .social{
+        color: white;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+    .footer .social a{
+        color: white;
+        font-size: 24px;
+        border: 2px solid #bb1133;
+        border-radius: 50%;
+        box-shadow: inset 0 0 10px #bb1133, 
+                    0 0 10px #bb1133;
+        transition: 0.3s ease;
+
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+        display: inline-block;
+        text-align: center;
+        margin: 0 8px;
+
+    }
+    .footer .social a:hover{
+        color: #bb1133;
+        border: 2px solid #bb1133;
+        transform: scale(1.2) translateY(-10px);
+    }
+    .footer ul{
+        font-size: 18px;
+
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1.6;
+        text-align: center;
+    }
+    .footer ul li a{
+        color: white;
+        background: none;
+        border-bottom: 3px solid transparent;
+        transition: 0.3s ease;
+    }
+    .footer ul li a:hover{
+        border-bottom: 3px solid #bb1133;
+    }
+    .footer ul li{
+        display: inline-block;
+        padding: 0 15px;
+    }
+    .footer .copyright{
+        color: white;
+        font-size: 12px;
+
+        margin-top: 15px;
+        text-align: center;
+    }
