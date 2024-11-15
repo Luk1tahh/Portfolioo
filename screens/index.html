@@ -15,8 +15,16 @@
             <a href="#acercademi"> Acerca de mi </a>
             <a href="proyects.html"> Proyectos </a>
             <a href="#"> Educacion </a>
+            <a href="contact.html" style="color: black;" class="contact"> <i class='bx bxl-gmail'></i> Contactame </a>
         </nav>
-            <a href="contact.html" class="contact"> <i class='bx bxl-gmail'></i> Contactame </a>
+        <div class="nav-content-2">
+            <button id="toggle-button"> <i class='bx bx-menu-alt-right'></i> </button>
+            <ul id="expandable-list" class="hidden">
+                <li>Proyectos</li>
+                <li>Educacion</li>
+                <li>Contactame</li>
+            </ul>
+        </div>
     </header>
     
     <!-- -------------------- MENU DESPLEGABLE
@@ -50,13 +58,13 @@
     <section id="acercademi" class="leng">
         <h1> Acerca de mi </h1>
             <div class="lenguajes">
-                <div>
+                <div class="cuadritos">
                     <p> <i class='bx bxl-html5'></i> </p>
                     <p> <i class='bx bxl-css3' ></i> </p>
                     <p> <i class='bx bxl-javascript'></i> </p>
-                    <p class="leng-text">Soy un desarrollador web en formación. Actualmente, manejo HTML y CSS, con los que puedo crear y estilizar
-                    páginas web, y estoy en el proceso de aprender JavaScript para añadir interactividad y dinamismo a mis proyectos.</p>
                 </div>        
+                <p class="leng-text">Soy un desarrollador web en formación. Actualmente, manejo HTML y CSS, con los que puedo crear y estilizar
+                    páginas web, y estoy en el proceso de aprender JavaScript para añadir interactividad y dinamismo a mis proyectos.</p>
             </div>
      </section>
     
@@ -70,5 +78,6 @@
         </div>
         <p class="copyright">&copy; 2024 Lucas Olguin &reg | Todos los derechos reservados.</p>
     </footer>
+<script src="../components/lista.js"></script> 
 </body>
 </html>

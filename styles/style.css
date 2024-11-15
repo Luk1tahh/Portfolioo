@@ -63,6 +63,10 @@ hr{
         color: #bb1133;
     }
     /* NOC COMO LLAMARTE */
+    .nav-content-2{
+        color:white;
+        display:none;
+    }
     .navbar > a{
         font-size: 20px;
         color: white;
@@ -93,6 +97,41 @@ hr{
         background-color: #bb1133;
         box-shadow: 0 0 25px #bb1133;
         color: white;
+    }
+/* BUTTON RESPONSIVE */
+#expandable-list {
+    color: white;
+    background-color: #333;
+    list-style: none;
+    border-radius: 5px;
+
+    padding: 0;
+    margin: 10px 0 0;
+    display: none; 
+}
+    #expandable-list li {
+        border-bottom: 1px solid #444;
+        padding: 10px;
+    }
+    #expandable-list li:last-child {
+        border-bottom: none;
+    }
+/* Clase para alternar visibilidad */
+.hidden {
+    display: none;
+}
+    /* Botón */
+    #toggle-button {
+        color: white;
+        background-color: #bb1133;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+
+        padding: 10px 20px;
+    }
+    #toggle-button:hover {
+        background-color: #bb1133;
     }
 
 /* MENU DESPLEGABLE
@@ -189,51 +228,76 @@ hr{
     }
 }
 @media (max-width: 768px) {
+    .header{
+        padding: 25px;
+        width: 100%;
+    }
+        .navbar{
+            display: none;
+        }
+        .nav-content-2{
+            color:white;
+            display:flex;
+        }
     .home {
         padding: 100px 5%;
         flex-direction: column;
         gap: 2em;
     }
-
-    .home-content h3 {
-        font-size: 30px;
-    }
-
-    .home-content h1 {
-        font-size: 38px;
-        text-align: center;
-    }
-
-    .home-content p {
-        font-size: 16px;
-        text-align: center;
-    }
-
-    .home img {
-        width: 80%;
-        margin-top: 20px;
-    }
+        .home-content h3 {
+            font-size: 30px;
+        }
+        .home-content h1 {
+            font-size: 38px;
+            text-align: center;
+        }
+        .home-content p {
+            font-size: 16px;
+            text-align: center;
+        }
+        .home img {
+            width: 80%;
+            margin-top: 20px;
+        }
 }
 @media (max-width: 480px) {
-    .home {
-        padding: 50px 5%;
-    }
-
-    .home-content h3 {
-        font-size: 28px;
-    }
-
-    .home-content h1 {
-        font-size: 32px;
-    }
-
-    .home-content p {
-        font-size: 14px;
-    }
-
-    .home img {
+    .header{
+        padding: 25px;
         width: 100%;
+        position: relative;
     }
+        .logo{
+            font-size: 25px;
+        }
+        .navbar > a{
+            font-size: 10px;
+        }
+        .contact{
+            font-size: 20px;
+        }
+    .home {
+        padding: 30px 0 10px 0;
+    }
+        .home-content h3 {
+            font-size: 28px;
+            text-align: center;
+        }
+        .home-content h1 {
+            font-size: 32px;
+            text-align: left;
+
+            margin: 0 5%;
+        }
+        .home-content p {
+            font-size: 14px;
+            text-align: justify;
+
+            padding-top: 10px;
+            margin: 0 2rem;
+        }
+        .home img {
+            display: none;
+        }
 }
 
 /* LENGUAJES */
@@ -299,46 +363,43 @@ hr{
 }
 @media (max-width: 768px) {
     .leng > h1 {
-        font-size: 40px;
-        padding: 50px 0px 30px 50px;
+        font-size: 32px;
     }
-
+    .cuadritos{
+        display: flex;
+    }
+    .lenguajes div{
+        padding: 0;
+        margin: 0 1.5rem;
+    }
+    .lenguajes div p{
+        padding-bottom: 0;
+    }
+    .lenguajes div p i{
+        font-size: 50px;
+    }
     .leng-text {
-        font-size: 24px;
-        padding: 0px 0px 0px 50px;
-    }
-
-    .lenguajes div {
-        padding: 30px 50px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .lenguajes p i {
-        font-size: 10vh;
-        margin-bottom: 20px;
+        font-size: 20px;
+        text-align: left;
     }
 }
 @media (max-width: 480px) {
     .leng > h1 {
         font-size: 32px;
-        padding: 40px 0px 20px 40px;
     }
-
+    .lenguajes div{
+        padding: 0;
+        margin: 0 1.5rem;
+    }
+    .lenguajes div p{
+        padding-bottom: 0;
+    }
+    .lenguajes div p i{
+        font-size: 50px;
+    }
     .leng-text {
         font-size: 20px;
-        padding: 0px 0px 0px 40px;
-    }
-
-    .lenguajes div {
-        padding: 20px 20px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .lenguajes p i {
-        font-size: 8vh;
-        margin-bottom: 15px;
+        text-align: left;
     }
 }
 
