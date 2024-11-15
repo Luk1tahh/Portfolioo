@@ -130,7 +130,6 @@ hr{
         max-width: 1350px; 
     }
     .proy-cont2{
-        background: rgb(21, 21, 21);
         padding-bottom: 100px;
         margin: 0 auto;
         max-width: 1350px; 
@@ -140,16 +139,17 @@ hr{
         grid-template-columns: repeat(4, 1fr); 
         gap: 40px;
         justify-content: center;
+        padding: 0 5%;
     }
     .proy-img{        
-        border-radius: 15px; 
+        border-radius: 20px; 
         box-shadow: 10px 8px 16px rgba(0, 0, 0, 0.4);
 
         width: 100%;
         height: auto;
     }
     .proy-img2{        
-        border-radius: 15px; 
+        border-radius: 20px; 
         box-shadow: 10px 8px 16px rgba(255, 255, 255, 0.4);
 
         width: 100%;

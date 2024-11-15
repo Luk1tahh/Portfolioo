@@ -82,7 +82,9 @@ hr{
 /* FORMULARIO */
 .formu{
     width: 100%;
-    min-height: 100vh;
+    min-height: 65vh;
+    text-align: center;
+    padding-top: 50px;
 }
     .field{
         font-weight: 600;
