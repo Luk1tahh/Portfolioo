@@ -23,13 +23,17 @@
 body{
     background-color: rgba(0, 0, 0, 0.9);
 }
+/* evita el scroll horizontal */
+body, html{
+    overflow-x: hidden;
+}
+
 /* LINEA */
 hr{
     width: 100%;
     border: none;
     border-top: 15px solid #bb1133;
     color: #bb1133;
-
 }
 /* ENCABEZADO */
 .header{    
@@ -96,8 +100,50 @@ hr{
         color: white;
     }
 
-/* BARRITA */
+/* Estilo general para la navegación */
+.nav-content-2 {
+    position: relative;
+    overflow: hidden;
+} 
+/* PANEL OCUTLTO */
+#expandable-list {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    list-style: none;
 
+    position: fixed;
+    top: 26;
+    right: -60%; /* Fuera de la vista inicialmente */
+    width: 45%;
+    height: 20vh; /* tamaño del panel */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: right 0.3s ease; /* Animación suave */
+}
+#expandable-list a {
+    color: #000; 
+}
+  /* Botón */
+#toggle-button {
+    background-color: #bb1133;
+    border-color: #bb1133;
+    border-radius: 10px;
+
+    padding: 10px;
+    position: relative;
+    z-index: 10; /* Asegúrate de que esté por encima del panel */
+}
+#toggle-button i {
+    color: #ffffff; /* Cambia el color del ícono según tu diseño */
+    font-size: 30px;
+}  
+/* Mostrar panel */
+#expandable-list.active {
+    right: 26; /* Mueve el panel a la vista */
+}
 
 /* PROYECTOS */
 .proyecto{
@@ -156,6 +202,42 @@ hr{
         height: auto;
     }
 
+@media (max-width: 768px) {
+.header{
+    padding: 25px;
+    width: 100%;
+    position: relative;
+}
+.logo{
+    font-size: 30px;
+}
+    .navbar{
+        display: none;
+    }
+    .nav-content-2{
+        color:white;
+        display:flex;
+    }
+.proy-tittle{
+    font-size: 30px;
+    padding: 20px 10px;
+}
+.proy-tittle2{
+    font-size: 30px;
+    padding: 20px 10px;
+}
+.proy-text{
+    font-size: 20px;
+    padding: 0 0 10px 10px;
+}
+.proy-text2{
+    font-size: 20px;
+    padding: 0 0 10px 10px;
+}
+.proy-bod{
+    grid-template-columns: repeat(2, 1fr);
+}
+}
 /* PIE DE PAGINA */
 .footer{
     background-color: black;

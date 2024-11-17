@@ -14,15 +14,20 @@
     <!-- -------------------- ENCABEZADO -------------------- -->
     <header class="header">
         <a href="/screens/index.html" class="logo"> <span>Lucas</span> Olguin </a>
-        <nav class="navbar">
-            <a href="/screens/index.html/#acercademi"> Acerca de mi </a>
-            <a href="#"> Educacion </a>
-        </nav>
+        <div class="nav-content-2">
+            <button id="toggle-button">
+                <i class='bx bx-menu-alt-right'></i>
+            </button>
+            <ul id="expandable-list">
+                <li><a href="/screens/proyects.html">Proyectos</a></li>
+                <li><a href="#">Educación</a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- -------------------- FORMULARIO -------------------- -->
     <section class="formu">
-        <form id="form">
+        <form id="form" class="form">
             <div class="field">
                 <label for="from_name">Nombre y Apellido</label>
                 <input type="text" name="from_name" id="from_name">
@@ -49,5 +54,6 @@
         <p class="copyright">&copy; 2024 Lucas Olguin &reg | Todos los derechos reservados.</p>
     </footer>
 <script src="/emailjs/email.js"></script>
+<script src="../components/lista.js"></script> 
 </body>
 </html>

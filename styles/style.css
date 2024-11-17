@@ -23,6 +23,10 @@
 body{
     background-color: rgba(0, 0, 0, 0.9);
 }
+/* evita el scroll horizontal */
+body, html{
+    overflow-x: hidden;
+}
 /* LINEA */
 hr{
     border: none;
@@ -98,41 +102,51 @@ hr{
         box-shadow: 0 0 25px #bb1133;
         color: white;
     }
-/* BUTTON RESPONSIVE */
+
+/* Estilo general para la navegación */
+.nav-content-2 {
+    position: relative;
+    overflow: hidden;
+} 
+/* PANEL OCUTLTO */
 #expandable-list {
-    color: white;
-    background-color: #333;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
     list-style: none;
-    border-radius: 5px;
 
-    padding: 0;
-    margin: 10px 0 0;
-    display: none; 
+    position: fixed;
+    top: 26;
+    right: -60%; /* Fuera de la vista inicialmente */
+    width: 45%;
+    height: 20vh; /* tamaño del panel */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: right 0.3s ease; /* Animación suave */
 }
-    #expandable-list li {
-        border-bottom: 1px solid #444;
-        padding: 10px;
-    }
-    #expandable-list li:last-child {
-        border-bottom: none;
-    }
-/* Clase para alternar visibilidad */
-.hidden {
-    display: none;
-}
-    /* Botón */
-    #toggle-button {
-        color: white;
-        background-color: #bb1133;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
+#expandable-list a {
+    color: #000; 
+ }
+  /* Botón */
+#toggle-button {
+    background-color: #bb1133;
+    border-color: #bb1133;
+    border-radius: 10px;
 
-        padding: 10px 20px;
-    }
-    #toggle-button:hover {
-        background-color: #bb1133;
-    }
+    padding: 10px;
+    position: relative;
+    z-index: 10; /* Asegúrate de que esté por encima del panel */
+}
+#toggle-button i {
+    color: #ffffff; /* Cambia el color del ícono según tu diseño */
+    font-size: 30px;
+}  
+/* Mostrar panel */
+#expandable-list.active {
+    right: 26; /* Mueve el panel a la vista */
+}  
 
 /* MENU DESPLEGABLE
 .menu-hor{
@@ -210,19 +224,16 @@ hr{
 
 /* RESPONSIVEs */
 @media (max-width: 1024px) {
-    .home {
-        padding: 150px 10%;
-        gap: 4em;
-    }
-
+.home {
+    padding: 150px 10%;
+    gap: 4em;
+}
     .home-content h3 {
         font-size: 36px;
     }
-
     .home-content h1 {
         font-size: 48px;
     }
-
     .home-content p {
         font-size: 18px;
     }
@@ -231,74 +242,46 @@ hr{
     .header{
         padding: 25px;
         width: 100%;
-    }
-        .navbar{
-            display: none;
-        }
-        .nav-content-2{
-            color:white;
-            display:flex;
-        }
-    .home {
-        padding: 100px 5%;
-        flex-direction: column;
-        gap: 2em;
-    }
-        .home-content h3 {
-            font-size: 30px;
-        }
-        .home-content h1 {
-            font-size: 38px;
-            text-align: center;
-        }
-        .home-content p {
-            font-size: 16px;
-            text-align: center;
-        }
-        .home img {
-            width: 80%;
-            margin-top: 20px;
-        }
-}
-@media (max-width: 480px) {
-    .header{
-        padding: 25px;
-        width: 100%;
         position: relative;
-    }
-        .logo{
-            font-size: 25px;
-        }
-        .navbar > a{
-            font-size: 10px;
-        }
-        .contact{
-            font-size: 20px;
-        }
-    .home {
-        padding: 30px 0 10px 0;
-    }
-        .home-content h3 {
-            font-size: 28px;
-            text-align: center;
-        }
-        .home-content h1 {
-            font-size: 32px;
-            text-align: left;
-
-            margin: 0 5%;
-        }
-        .home-content p {
-            font-size: 14px;
-            text-align: justify;
-
-            padding-top: 10px;
-            margin: 0 2rem;
-        }
-        .home img {
-            display: none;
-        }
 }
+.logo{
+    font-size: 30px;
+}
+    .navbar{
+        display: none;
+    }
+    .nav-content-2{
+        color:white;
+        display:flex;
+    }
+.home {
+    padding: 90px 0;    
+    flex-direction: column;
+    gap: 2em;
+}
+    .home-content h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .home-content h1 {
+        font-size: 38px;
+        text-align: left;
+        margin: 0 5%;
+    }
+    .home-content p {
+        font-size: 16px;
+        text-align: justify;
+        padding-top: 10px;    
+        margin: 0 2rem;
+    }
+    .home img {
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+/* por las dudas */
+@media (max-width: 480px){}
 
 /* LENGUAJES */
 .leng{
@@ -363,45 +346,29 @@ hr{
 }
 @media (max-width: 768px) {
     .leng > h1 {
-        font-size: 32px;
-    }
-    .cuadritos{
-        display: flex;
-    }
-    .lenguajes div{
-        padding: 0;
-        margin: 0 1.5rem;
-    }
-    .lenguajes div p{
-        padding-bottom: 0;
-    }
-    .lenguajes div p i{
-        font-size: 50px;
+    font-size: 32px;
+    padding-bottom: 5px;
+}
+.cuadritos{
+    display: flex;
+    justify-content: center;
+}
+    .cuadritos p i{
+        font-size: 65px;
     }
     .leng-text {
         font-size: 20px;
+
+        margin: 0 2rem;
         text-align: left;
-    }
-}
-@media (max-width: 480px) {
-    .leng > h1 {
-        font-size: 32px;
-    }
-    .lenguajes div{
         padding: 0;
-        margin: 0 1.5rem;
     }
-    .lenguajes div p{
-        padding-bottom: 0;
-    }
-    .lenguajes div p i{
-        font-size: 50px;
-    }
-    .leng-text {
-        font-size: 20px;
-        text-align: left;
+    .footer .copyright{
+        font-size: 10px;
     }
 }
+/* x las dudas */
+@media (max-width: 480px){}
 
 /* PIE DE PAGINA */
 .footer{
@@ -465,6 +432,5 @@ hr{
         color: white;
         font-size: 12px;
 
-        margin-top: 15px;
         text-align: center;
     }
