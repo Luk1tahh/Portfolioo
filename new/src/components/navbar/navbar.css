@@ -1,0 +1,28 @@
+.fondoNavbar{
+    background-color: grey;
+    padding: 3rem 0;
+}
+.divNavbar{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+}
+.logoNavbar{
+    color: #242424;
+}
+.listNavbar{
+    color: grey;
+    gap: 2rem;
+    display: flex;
+    list-style: none;
+}
+    .listNavbar li{
+        background-color: #242424;
+        border-radius: 20px;
+
+        padding: 1rem;
+    }
+    .listNavbar li:hover{
+        color: white;
+        background-color: #363636;
+    }

@@ -1,0 +1,19 @@
+/* .fondoHome{
+    background-color: red;
+} */
+.Intro{    
+    gap: 20rem;
+    display: flex;
+    padding: 5rem 15rem;
+    justify-content: space-around;
+}
+.txtLeng{
+    color: #242424;
+    background-color: grey;
+    padding: 1rem 5rem;
+}
+.cardsLeng{
+    display: flex;
+    padding: 2rem 0;
+    justify-content: space-around;
+}
