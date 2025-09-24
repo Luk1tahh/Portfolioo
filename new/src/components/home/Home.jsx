@@ -1,6 +1,6 @@
 import React from 'react'
-import Presentacion from './cards/Presentacion'
-import Projects from './cards/Projects'
+import Presentacion from '../cards/Presentacion'
+import Projects from '../cards/Projects'
 import './home.css'
 
 const Home = () => {

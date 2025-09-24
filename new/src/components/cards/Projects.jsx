@@ -1,5 +1,5 @@
 import React from 'react'
-import trembo from '../../../assets/img/trembo.jpg'
+import trembo from '../../assets/img/trembo.jpg'
 import './projects.css'
 
 const Projects = () => {
